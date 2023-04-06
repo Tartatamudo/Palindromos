@@ -22,10 +22,10 @@ public class Palin {
 
         String strResultado = "".join("",resultado);
 
-        if (strResultado.contains(cadena)){
-            return true;
-        }else{
+        if (!strResultado.equals(cadena) || strResultado.equals("")){
             return false;
+        }else{
+            return true;
         }
     }
     public static void imprimir (Boolean bool){
@@ -42,6 +42,8 @@ public class Palin {
     }
 
     public static void main(String[] args) {
+        System.out.println("Ingrese texto");
         imprimir(esPalindromo(HacerCadenaIdonea(Ingresarcadena())));
     }
+
 }

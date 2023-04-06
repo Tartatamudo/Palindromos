@@ -11,7 +11,8 @@ class PalinTest {
 
     @Test
     void hacerCadenaIdonea() {
-        assertEquals("hola", Palin.HacerCadenaIdonea("H##$o[¨[¨**L ,.,-´{´0897895a"));
+        assertEquals("hola", Palin.HacerCadenaIdonea("H##$o[¨[¨**L   ,.,-´{´0897895a"));
+        assertEquals("", Palin.HacerCadenaIdonea("   3552352532$%#%#,.,---:;:$"));
     }
 
     @Test
@@ -19,6 +20,7 @@ class PalinTest {
         assertEquals(true, Palin.esPalindromo("kerek"));
         assertEquals(false, Palin.esPalindromo("kerek*"));
         assertEquals(false, Palin.esPalindromo("KEREK1"));
+        assertEquals(false, Palin.esPalindromo(""));
     }
 
 }
